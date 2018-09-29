@@ -41,7 +41,7 @@ public class DictionaryCommandLine {
     static int N ;
 
     public static void main(String[] args) throws IOException {
-
+        dictionaryAdvanced();
         new DictionaryApplication().JFrameDemo();
 
     }

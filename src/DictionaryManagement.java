@@ -36,16 +36,16 @@ public class DictionaryManagement {
             Dictionary.wordArray.add(tmp);
         }
     }
-    public static void dictionaryLookup(){
-        Word UserSearch = new Word();
-        UserSearch.world_target = DictionaryCommandLine.input.next();
-        String tmp = UserSearch.world_target;
+    public static void dictionaryLookup(String userSearch){
+//        Word UserSearch = new Word();
+//        UserSearch.world_target = DictionaryCommandLine.input.next();
+//        String tmp = UserSearch.world_target;
         for (int i = 0 ; i < Dictionary.wordArray.size(); i++)
         {
-            Word tmp1 = new Word();
-            tmp1 = Dictionary.wordArray.get(i);
-            if (tmp.equals(tmp1.world_target)){
-                System.out.println(tmp1.world_explain);
+            Word tmp = new Word();
+            tmp = Dictionary.wordArray.get(i);
+            if (userSearch.equals(tmp.world_target)){
+                System.out.println(tmp.world_explain);
             }
         }
 
