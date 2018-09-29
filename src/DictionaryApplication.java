@@ -69,7 +69,8 @@ public class DictionaryApplication extends JFrame implements ActionListener {
                 if ("search".equals(e.getActionCommand()))
                 {
                     String SearchWord = this.InsertWord.getText();
-                    DictionaryManagement.dictionaryLookup(SearchWord);
+                    String output = DictionaryManagement.dictionaryLookup(SearchWord);
+                    this.WordMean.setText(output);
                 }
 
 
