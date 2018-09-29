@@ -27,6 +27,7 @@ public class DictionaryCommandLine {
     }
     public static void menu()
     {
+
         System.out.println("==================WELCOME TO TPDict================");
         System.out.println("Press 1 | Search ");
         System.out.println("Press 2 | Remove word from dictionary ");
@@ -40,45 +41,8 @@ public class DictionaryCommandLine {
     static int N ;
 
     public static void main(String[] args) throws IOException {
-        dictionaryAdvanced();
-        boolean loop = true;
-        while (loop)
-        {
-            menu();
-            int option = input.nextInt();
-            if (option == 0)
-            {
-                loop = false;
-            }
-            else if (option == 1)
-            {
-                DictionaryManagement.dictionaryLookup();
 
-            }
-            else if (option == 2)
-            {
-                DictionaryManagement.removeFromDictionary();
-
-            }
-            else if (option == 3)
-            {
-                DictionaryManagement.updateDictionary();
-                DictionaryManagement.dictionaryExportToFile();
-                System.out.println("Updated!");
-
-            }
-            else if (option == 4)
-            {
-                DictionaryManagement.addDictionary();
-                DictionaryManagement.dictionaryExportToFile();
-                System.out.println("Added!");
-
-            }
-            else if (option == 5){
-                dictionarySearcher();
-            }
-        }
-
+        new DictionaryApplication().JFrameDemo();
 
     }
 }
