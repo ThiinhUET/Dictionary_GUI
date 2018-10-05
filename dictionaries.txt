@@ -1,9 +1,9 @@
 ﻿﻿you bạn
 milk sữa
 home nhà
-search tìm kiếm
+search danh từ/tìm kiếm/EX: search engine - công cụ tìm kiếm
 illusion ảo ảnh
-frock áo dài
+frock danh từ/áo dài/áo dài việt nam
 suits âu phục
 grandmother	bà ngoại
 mouse chuột
@@ -75,7 +75,7 @@ cheese phô mai
 eggs trứng
 margarine bơ thực vật
 yogurt sữa chua
-fast food đồ ăn nhanh
+fastfood đồ ăn nhanh
 bun bánh bao nhân nho
 patty miếng chả nhỏ
 hamburger bánh kẹp

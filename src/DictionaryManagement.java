@@ -105,14 +105,8 @@ public class DictionaryManagement {
         }
 
     }
-    public static void Trim()
-    {
-        for (int i = 0 ; i < Dictionary.wordArray.size(); i++)
-        {
-            Dictionary.wordArray.get(i).world_target.trim();
-            Dictionary.wordArray.get(i).world_explain.trim();
-        }
-    }
+
+
 
 
 }

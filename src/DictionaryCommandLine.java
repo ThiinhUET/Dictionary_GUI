@@ -1,4 +1,6 @@
+import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryCommandLine {
@@ -14,15 +16,11 @@ public class DictionaryCommandLine {
 
 
     }
-    public static void dictionarySearcher(){
-        String userInput = input.next();
-        for (int i = 0 ; i < Dictionary.wordArray.size(); i++)
-        {
-            String tmp = Dictionary.wordArray.get(i).world_target;
-            if (tmp.contains(userInput)){
-                System.out.print(tmp + " ");
-            }
-        }
+
+    public static void keyReleased(KeyEvent ke)
+    {
+        String str=ke.getKeyText(ke.getKeyCode());
+        System.out.println(str); /*hiển thị các kí tự bạn gõ để biết giá trị */
 
     }
     public static void menu()
@@ -43,6 +41,7 @@ public class DictionaryCommandLine {
     public static void main(String[] args) throws IOException {
         dictionaryAdvanced();
         new DictionaryApplication().JFrameDemo();
+
 
     }
 }

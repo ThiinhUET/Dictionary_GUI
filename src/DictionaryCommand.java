@@ -7,4 +7,5 @@ public class DictionaryCommand {
             System.out.println(tmp.world_target +"\t"+tmp.world_explain);
         }
     }
+
 }

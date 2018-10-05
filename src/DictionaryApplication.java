@@ -1,41 +1,64 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class DictionaryApplication extends JFrame implements ActionListener {
 
 
 
-    private JFrame frame;
-    private JButton seachButton;
-    JTextField InsertWord;
-    JPanel panel;
-    JLabel showIm;
-    TextArea WordMean;
-    JButton undoButton;
-
-    public void JFrameDemo(){
+     JTextField InsertWord;
+     JPanel panel;
+     JLabel showIm;
+     TextArea WordMean;
+     JButton read;
+     JFrame frame;
+     JButton seachButton;
+     TextArea SuggestArea;
+    public void JFrameDemo() {
         createAndShow();
 
     }
-    public  void createAndShow() {
+    public static ArrayList dictionarySearcher(String a){
+        ArrayList<Word> suggestArea = new ArrayList<Word>();
+        for (int i = 0 ; i < Dictionary.wordArray.size(); i++)
+        {
+            String tmp = Dictionary.wordArray.get(i).world_target;
+            if (tmp.startsWith(a)){
+                suggestArea.add(Dictionary.wordArray.get(i));
+            }
+        }
+        return suggestArea;
+
+    }
+
+    public void createAndShow() {
         ///////////Initial Fram//////////////
         frame = new JFrame("TPDict");
-        frame.setSize(600, 400);
+        frame.setSize(800, 500);
         frame.setLocationRelativeTo(null);
+        frame.setBackground(Color.BLUE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
 
 
+
         seachButton = new JButton("Search");
-        seachButton.setBounds(470, 60, 100, 35);
+        seachButton.setBounds(250, 400, 100, 35);
         frame.add(seachButton);
 
 
         InsertWord = new JTextField();
-
-        InsertWord.setBounds(50, 60, 400, 25);
+        InsertWord.setBounds(20, 60, 200, 25);
         frame.add(InsertWord);
 
 
@@ -50,29 +73,88 @@ public class DictionaryApplication extends JFrame implements ActionListener {
 
 
         WordMean = new TextArea();
-        WordMean.setBounds(50, 100, 400, 300);
+        WordMean.setBounds(250, 60, 400, 300);
+        WordMean.setFont(new Font("Serif",Font.ITALIC,20));
+        WordMean.setFocusable (false);
+
         frame.add(WordMean);
 
-        undoButton = new JButton("Undo");
-        undoButton.setBounds(470, 110, 100, 35);
-        frame.add(undoButton);
+        read = new JButton("Read");
+        read.setBounds(100, 400, 100, 35);
+        frame.add(read);
+
+
+        SuggestArea = new TextArea();
+        SuggestArea.setBounds(20,100,200,250);
+        SuggestArea.setFocusable (false);
+        frame.add(SuggestArea);
+
+
 
         ////////////////////////////setAction//////////////////////
         seachButton.setActionCommand("search");
         seachButton.addActionListener(this);
 
+        read.setActionCommand("read");
+        read.addActionListener(this);
+
+        Timer task = new Timer ();
+        TimerTask SG = new TimerTask () {
+            @Override
+            public void run() {
+                SuggestArea.setText (null);
+                ArrayList<Word> tmp ;
+                String getT = InsertWord.getText ();
+                tmp = dictionarySearcher (getT);
+                for (int i = 0 ; i< tmp.size ();i++)
+                {
+                    String tmp2 = tmp.get (i).world_target;
+                    SuggestArea.append (tmp2+"\n");
+                }
+              //  SuggestArea.setText (null);
+            }
+        };
+        task.schedule (SG,1,5000);
+
+
+        //////////////////////////////////////////////////////////////
+
+
+
     }
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
-                if ("search".equals(e.getActionCommand()))
-                {
-                    String SearchWord = this.InsertWord.getText();
-                    String output = DictionaryManagement.dictionaryLookup(SearchWord);
-                    this.WordMean.setText(output);
-                }
-
+        if ("search".equals(e.getActionCommand())) {
+            String SearchWord = this.InsertWord.getText();
+            String output = DictionaryManagement.dictionaryLookup(SearchWord);
+            String[] part = output.split("/");
+            String p1 =part[0];
+            String p2 = part[1];
+            String p3 = part[2];
+            this.WordMean.setText(p1+ "\n"+p2+"\n"+p3);
 
         }
+        if ("read".equals(e.getActionCommand())) {
+            String speak = InsertWord.getText();
+            BufferedWriter outputWriter = null;
+            try {
+                outputWriter = new BufferedWriter(new FileWriter("Sound.vbs"));
+                outputWriter.write("CreateObject(\"SAPI.SpVoice\").Speak\"" + speak + "\"");
+                outputWriter.flush();
+                outputWriter.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            try {
+                Runtime.getRuntime().exec(new String[]{"wscript.exe", "Sound.vbs"});
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+    }
+    
 }
+
+
