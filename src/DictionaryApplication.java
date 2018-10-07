@@ -161,11 +161,12 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         if ("search".equals (e.getActionCommand ())) {
             String SearchWord = this.InsertWord.getText ();
             String output = DictionaryManagement.dictionaryLookup (SearchWord);
-            String[] part = output.split ("/");
-            String p1 = part[0];
-            String p2 = part[1];
-            String p3 = part[2];
-            this.WordMean.setText (p1 + "\n" + p2 + "\n" + p3);
+//            String[] part = output.split ("/");
+//            String p1 = part[0];
+//            String p2 = part[1];
+//            String p3 = part[2];
+//            this.WordMean.setText (p1 + "\n" + p2 + "\n" + p3);
+            this.WordMean.setText (output);
 
         }
         if ("read".equals (e.getActionCommand ())) {
@@ -190,17 +191,29 @@ public class DictionaryApplication extends JFrame implements ActionListener {
             System.exit (0);
         }
 
-        if ("add".equals (e.getActionCommand ()))
-        {
+        if ("add".equals (e.getActionCommand ())) {
               String addW =   JOptionPane.showInputDialog (rootPane,"Nhập từ muốn thêm");
               String addM = JOptionPane.showInputDialog (rootPane,"Nhập Nghĩa");
               JOptionPane.showMessageDialog (rootPane,"Đã được thêm");
-         //     DictionaryManagement.updateDictionary (addW,addM);
+           //   DictionaryManagement.updateDictionary (addW,addM);
+            try {
+                FileWriter fstream = new FileWriter("dictionaries.txt",true);
+                BufferedWriter fbw = new BufferedWriter(fstream);
+                fbw.write(addW+" "+addM);
+                fbw.newLine();
+                fbw.close();
+            }
+            catch (IOException e2) {
+                e2.printStackTrace();
+            }
+            DictionaryManagement.insertFromFile ();
         }
 
         if ("delete".equals (e.getActionCommand ()))
         {
-            JOptionPane.showInputDialog (rootPane,"Nhập từ muốn xóa");
+            String del = JOptionPane.showInputDialog (rootPane,"Nhập từ muốn xóa");
+
+
         }
 
         if ("update".equals (e.getActionCommand ()))

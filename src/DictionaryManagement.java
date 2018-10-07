@@ -53,26 +53,15 @@ public class DictionaryManagement {
 
     }
 
-    public static void addDictionary(String Word, String Mean) throws IOException
-    {
-//        Word userInput = new Word();
-//        userInput.world_target = Word;
-//        userInput.world_explain = Mean;
-//        Dictionary.wordArray.add(userInput);
-//        BufferedWriter outputWriter = null;
-//        outputWriter = new BufferedWriter(new FileWriter("dictionary.txt"));
-//        try {
-//                outputWriter.write(Word + "\t" + Mean);
-//                outputWriter.newLine();
+//    public static void addDictionary(String Word, String Mean) throws IOException
+//    {
+////        Word userInput = new Word();
+////        userInput.world_target = Word;
+////        userInput.world_explain = Mean;
+////        Dictionary.wordArray.add(userInput);
+////
 //
-//            outputWriter.flush();
-//            outputWriter.close();
-//        }
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-    }
+//    }
     public static void removeFromDictionary()
     {
         Word userInput = new Word();
