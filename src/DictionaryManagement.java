@@ -53,12 +53,25 @@ public class DictionaryManagement {
 
     }
 
-    public static void addDictionary()
+    public static void addDictionary(String Word, String Mean) throws IOException
     {
-        Word userInput = new Word();
-        userInput.world_target = DictionaryCommandLine.input.next();
-        userInput.world_explain = DictionaryCommandLine.input.nextLine();
-        Dictionary.wordArray.add(userInput);
+//        Word userInput = new Word();
+//        userInput.world_target = Word;
+//        userInput.world_explain = Mean;
+//        Dictionary.wordArray.add(userInput);
+//        BufferedWriter outputWriter = null;
+//        outputWriter = new BufferedWriter(new FileWriter("dictionary.txt"));
+//        try {
+//                outputWriter.write(Word + "\t" + Mean);
+//                outputWriter.newLine();
+//
+//            outputWriter.flush();
+//            outputWriter.close();
+//        }
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
     }
     public static void removeFromDictionary()
     {
@@ -73,7 +86,7 @@ public class DictionaryManagement {
             }
         }
     }
-    public static void updateDictionary(){
+    public static void updateDictionary(String addW, String addM){
         Word userInput = new Word();
         userInput.world_target = DictionaryCommandLine.input.next();
         userInput.world_explain= DictionaryCommandLine.input.next();

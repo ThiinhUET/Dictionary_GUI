@@ -10,7 +10,7 @@ public class DictionaryCommandLine {
         DictionaryCommand.showAllWords();
 
     }
-    public static void dictionaryAdvanced() throws IOException {
+    public static void dictionaryAdvanced() {
 
         DictionaryManagement.insertFromFile();
 
@@ -19,7 +19,7 @@ public class DictionaryCommandLine {
 
     public static void keyReleased(KeyEvent ke)
     {
-        String str=ke.getKeyText(ke.getKeyCode());
+        String str= KeyEvent.getKeyText (ke.getKeyCode());
         System.out.println(str); /*hiển thị các kí tự bạn gõ để biết giá trị */
 
     }
