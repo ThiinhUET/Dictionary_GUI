@@ -50,9 +50,7 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         frame.setBackground (Color.BLUE);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         frame.setResizable (false);
-        frame.getContentPane ().setBackground(new java.awt.Color(107, 225, 222));
-
-
+        frame.getContentPane ().setBackground (new java.awt.Color (107, 225, 222));
 
 
         seachButton = new JButton ("Search");
@@ -92,19 +90,19 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         frame.add (SuggestArea);
 
         Addnew = new JButton ("Add");
-        Addnew.setBounds (680,100,80,25);
+        Addnew.setBounds (680, 100, 80, 25);
         frame.add (Addnew);
 
         DelWord = new JButton ("Delete");
-        DelWord.setBounds (680,150,80,25);
+        DelWord.setBounds (680, 150, 80, 25);
         frame.add (DelWord);
 
         UpdateWord = new JButton ("Update");
-        UpdateWord.setBounds (680,200,80,25);
+        UpdateWord.setBounds (680, 200, 80, 25);
         frame.add (UpdateWord);
 
         exit = new JButton ("Exit");
-        exit.setBounds (680,250,80,25);
+        exit.setBounds (680, 250, 80, 25);
         frame.add (exit);
 
         ///////////////change code above this//////////////////////
@@ -185,105 +183,94 @@ public class DictionaryApplication extends JFrame implements ActionListener {
                 e1.printStackTrace ();
             }
         }
-        if ("exit".equals (e.getActionCommand ()))
-        {
+        if ("exit".equals (e.getActionCommand ())) {
             System.exit (0);
         }
 
         if ("add".equals (e.getActionCommand ())) {
-              String addW =   JOptionPane.showInputDialog (rootPane,"Nhập từ muốn thêm");
-              String addM = JOptionPane.showInputDialog (rootPane,"Nhập Nghĩa");
-              JOptionPane.showMessageDialog (rootPane,"Đã được thêm");
-           //   DictionaryManagement.updateDictionary (addW,addM);
+            String addW = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn thêm");
+            String addM = JOptionPane.showInputDialog (rootPane, "Nhập Nghĩa");
+            JOptionPane.showMessageDialog (rootPane, "Đã được thêm");
+            //   DictionaryManagement.updateDictionary (addW,addM);
             try {
-                FileWriter fstream = new FileWriter("dictionaries.txt",true);
-                BufferedWriter fbw = new BufferedWriter(fstream);
-                fbw.write(addW+" "+addM);
-                fbw.newLine();
-                fbw.close();
-            }
-            catch (IOException e2) {
-                e2.printStackTrace();
+                FileWriter fstream = new FileWriter ("dictionaries.txt", true);
+                BufferedWriter fbw = new BufferedWriter (fstream);
+                fbw.write (addW + " " + addM);
+                fbw.newLine ();
+                fbw.close ();
+            } catch (IOException e2) {
+                e2.printStackTrace ();
             }
             DictionaryManagement.insertFromFile ();
         }
 
-        if ("delete".equals (e.getActionCommand ()))
-        {
-            String del = JOptionPane.showInputDialog (rootPane,"Nhập từ muốn xóa");
+        if ("delete".equals (e.getActionCommand ())) {
+            String del = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn xóa");
             ArrayList<Word> DeleteArray = new ArrayList<> ();
             Scanner scanner = null;
             String Filepath = "dictionaries.txt";
             try {
-                scanner = new Scanner(new File (Filepath));
-            }catch (FileNotFoundException e1){
-                scanner = new Scanner(System.in);
-                System.out.print("File not found");
+                scanner = new Scanner (new File (Filepath));
+            } catch (FileNotFoundException e1) {
+                scanner = new Scanner (System.in);
+                System.out.print ("File not found");
             }
-            while (scanner.hasNext())
-            {
-                String eng = scanner.next();
-                String vie = scanner.nextLine();
-                Word tmp = new Word();
-                tmp.world_target= eng;
+            while (scanner.hasNext ()) {
+                String eng = scanner.next ();
+                String vie = scanner.nextLine ();
+                Word tmp = new Word ();
+                tmp.world_target = eng;
                 tmp.world_explain = vie;
-                DeleteArray.add(tmp);
+                DeleteArray.add (tmp);
             }
             int index = 0;
-            for (int i = 0 ; i< DeleteArray.size ();i++)
-            {
-                if (del.equals (DeleteArray.get (i).world_target))
-                {
+            for (int i = 0; i < DeleteArray.size (); i++) {
+                if (del.equals (DeleteArray.get (i).world_target)) {
                     index = i;
                 }
             }
             DeleteArray.remove (index);
-            try{
+            try {
                 BufferedWriter outputWriteer = null;
-                outputWriteer = new BufferedWriter(new FileWriter("dictionaries.txt"));
-                    for (int i = 0; i < DeleteArray.size(); i++) {
-                        Word tmp = DeleteArray.get(i);
+                outputWriteer = new BufferedWriter (new FileWriter ("dictionaries.txt"));
+                for (int i = 0; i < DeleteArray.size (); i++) {
+                    Word tmp = DeleteArray.get (i);
 
-                        outputWriteer.write(tmp.world_target + " " + tmp.world_explain);
-                        outputWriteer.newLine();
-                    }
-                    outputWriteer.flush();
-                    outputWriteer.close();
+                    outputWriteer.write (tmp.world_target + " " + tmp.world_explain);
+                    outputWriteer.newLine ();
                 }
-                catch (IOException e1) {
-                    e1.printStackTrace ();
-                }
-            JOptionPane.showMessageDialog (rootPane,"Đã xóa khỏi từ điển");
+                outputWriteer.flush ();
+                outputWriteer.close ();
+            } catch (IOException e1) {
+                e1.printStackTrace ();
+            }
+            JOptionPane.showMessageDialog (rootPane, "Đã xóa khỏi từ điển");
             DictionaryManagement.insertFromFile ();
 
         }
 
-        if ("update".equals (e.getActionCommand ()))
-        {
-           String updateW =  JOptionPane.showInputDialog (rootPane,"Nhập từ muốn sửa");
-            String updateM =  JOptionPane.showInputDialog (rootPane,"Nhập nghĩa mới của từ");
+        if ("update".equals (e.getActionCommand ())) {
+            String updateW = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn sửa");
+            String updateM = JOptionPane.showInputDialog (rootPane, "Nhập nghĩa mới của từ");
             ArrayList<Word> Update = new ArrayList<> ();
             Scanner scanner = null;
             String Filepath = "dictionaries.txt";
             try {
-                scanner = new Scanner(new File (Filepath));
-            }catch (FileNotFoundException e1){
-                scanner = new Scanner(System.in);
-                System.out.print("File not found");
+                scanner = new Scanner (new File (Filepath));
+            } catch (FileNotFoundException e1) {
+                scanner = new Scanner (System.in);
+                System.out.print ("File not found");
             }
-            while (scanner.hasNext())
-            {
-                String eng = scanner.next();
-                String vie = scanner.nextLine();
-                Word tmp = new Word();
-                tmp.world_target= eng;
+            while (scanner.hasNext ()) {
+                String eng = scanner.next ();
+                String vie = scanner.nextLine ();
+                Word tmp = new Word ();
+                tmp.world_target = eng;
                 tmp.world_explain = vie;
-                Update.add(tmp);
+                Update.add (tmp);
             }
-            for (int i = 0 ; i < Update.size ();i++)
-            {
-                if (updateW.equals (Update.get (i).world_target))
-                {
+            for (int i = 0; i < Update.size (); i++) {
+                if (updateW.equals (Update.get (i).world_target)) {
                     Update.remove (i);
                     Word tmp = new Word ();
                     tmp.world_target = updateW;
@@ -291,30 +278,24 @@ public class DictionaryApplication extends JFrame implements ActionListener {
                     Update.add (tmp);
                 }
             }
-            try{
+            try {
                 BufferedWriter outputWriteer = null;
-                outputWriteer = new BufferedWriter(new FileWriter("dictionaries.txt"));
-                for (int i = 0; i < Update.size(); i++) {
-                    Word tmp = Update.get(i);
+                outputWriteer = new BufferedWriter (new FileWriter ("dictionaries.txt"));
+                for (int i = 0; i < Update.size (); i++) {
+                    Word tmp = Update.get (i);
 
-                    outputWriteer.write(tmp.world_target + " " + tmp.world_explain);
-                    outputWriteer.newLine();
+                    outputWriteer.write (tmp.world_target + " " + tmp.world_explain);
+                    outputWriteer.newLine ();
                 }
-                outputWriteer.flush();
-                outputWriteer.close();
-            }
-            catch (IOException e1) {
+                outputWriteer.flush ();
+                outputWriteer.close ();
+            } catch (IOException e1) {
                 e1.printStackTrace ();
             }
-            JOptionPane.showMessageDialog (rootPane,"Đã được chỉnh sửa");
+            JOptionPane.showMessageDialog (rootPane, "Đã được chỉnh sửa");
             DictionaryManagement.insertFromFile ();
-
-
         }
-
-
     }
-
 }
 
 
