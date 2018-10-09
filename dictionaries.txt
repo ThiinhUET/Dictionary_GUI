@@ -1,399 +1,399 @@
-﻿﻿you  bạn
-milk  sữa
-home  nhà
-search  danh từ/tìm kiếm/EX: search engine - công cụ tìm kiếm
-illusion  ảo ảnh
-frock  danh từ/áo dài/áo dài việt nam
-suits  âu phục
-grandmother 	bà ngoại
-mouse  chuột
-pitfall  cạm bẫy
-inspired  cảm hứng
-love  yêu
-staff  nhân viên
-beast  cầm thú
-democarcy  dân chủ
-people  người
-mishapen  dị hình
-heritage  di sản
-past  quá khứ
-business  doanh nghiệp
-morality  đạo đức
-night  ban đêm
-lychee  trái vải
-jackfruit  trái khế
-mango  trái xoài
-custard-apple  mãng cầu
-ramcutan  trái chôm chôm
-orange  trái cam
-mandarin  trái quýt
-lemon  quả chanh
-pineapple  quả dứa
-pomegranate  quả lựu
-avacado  quả bơ
-coconut  quả dừa
-melon  quả dưa gang
-banana  quả chuối
-pear  quả lê
-peach  quả đào
-watermelon  quả dưa hấu
-strawberry  quả dâu
-grape  quả nho đen
-fig  quả sung
-pitaya  quả thanh long
-papaya  quả đu đủ
-plum  quả mận
-apricot  quả mơ
-tomato  quả cà chua
-bacon  thịt muối
-beef  thịt bò
-chicken  thịt gà
-cooked  meat thịt chín
-duck  vịt
-ham  thịt giăm bông
-kdneys  thận
-lamb  thịt cừu
-liver  gan
-mince  thịt bò xay
-sausages  xúc xích
-pork  thịt lợn
-turkey  gà tây
-veal  thịt bê
-anchovy  cá trồng
-cod  cá tuyết
-haddock  cá êfin
-herring  cá trích
-kipper  cá hun khói
-mackerel  cá thu
-pilchard  cá mòi cơm
-salmon  cá hồi
-sole  cá bơn
-tuna  cá ngừ
-butter  bơ 
-cream  kem
-cheese  phô mai
-eggs  trứng
-margarine  bơ thực vật
-yogurt  sữa chua
-fastfood  đồ ăn nhanh
-bun  bánh bao nhân nho
-patty  miếng chả nhỏ
-hamburger  bánh kẹp
-hotdog  bánh mì kẹp xúc xích
-wiener  lạp xưởng
-condiments  đồ gia vị
-ketchup  nước sốt cà chua nấm
-mustard  mù tạt
-pickle  hoa quả dầm
-crust  vỏ bánh
-popcorn  ngô rang
-pie  bánh nướng
-donut  bánh rán
-gum  kẹo cao su
-candy  bar thanh kẹo
-beer  bia
-coffee  cà phê
-fruit  juice nước ép hoa quả
-fruit  smoothie sinh tố hoa quả
-hot  chocolate ca cao nóng
-milkshake  sữa lắc
-soda  nước ngọt có ga
-tea  trà
-wine  rượu
-lemonande  nước chanh
-champagne  rượu sâm panh
-grandmother  bà nội, bà ngoại
-grandfather  ông nội, ông ngoại
-mother  mẹ
-father  bố
-uncle  cậu, chú, bác
-aunt  dì
-sister  chị, em gái
-brother  anh, em trai
-cousin  anh chị em họ
-brother-in-law  anh rể, em rể
-niece  cháu gái
-nephew  cháu trai
-only  child con một
-infant  trẻ sơ sinh
-toddler  đứa bé mới đi học
-twin  sinh đôi
-triplet  sinh ba
-sibling  anh chị em ruột
-parents-in-law  bố mẹ chồng
-son  con trai
-daughter-in-law  con dâu
-relative  người họ hàng
-nanny  vú nuôi
-stepmother  mẹ kế
-godmother  mẹ đỡ đầu
-orphan  trẻ mồ côi
-weather  thời tiết
-climate  khí hậu
-mild  ôn hòa, ấm áp
-dry  hanh khô
-wet  ướt sũng
-humid  ẩm
-bright  sáng mạnh
-sunny  trời không có mây
-clear  trời trong trẻo
-fine  không mưa không mây
-windy  trời nhiều gió
-brezze  gió nhẹ
-gloomy  trời ảm đạm
-cloudy  trời nhiều mây
-overcast  âm u
-foggy  có sương mù
-temperature  nhiệt độ
-thermometer  nhiệt kế
-degree  độ
-celsius  độ C
-Fahrenheit  độ F 
-hot  nóng
-baking  hot nóng như thiêu
-cold  lạnh
-chilly  lạnh thấu xương
-freeze  đóng băng
-frosty  đầy sương giá
-rainfall  lượng mưa
-downpour  mưa lớn
-torrential  rain mưa như thác đổ
-weather  forecast dự báo thời tiết
-rain  mưa
-damp  ẩm thấp, ẩm ướt 
-drizzle  mưa phùn
-shower  mưa rào
-hail  mưa đá
-flood  lũ lụt
-lightning  tia chớp
-thunder  sấm sét
-snow  tuyết
-gale  gió giật
-mist  sương muối
-storm  bão
-hurricane  sóng thần
-tornado  lốc xoáy
-rainbow  cầu vồng
-occupation  nghề nghiệp
-doctor  bác sĩ
-dentist  nha sĩ
-cashier  thu ngân
-builder  thợ xây dựng
-reporter  phóng viên
-tailor  thợ may
-teacher  giáo viên
-cook  đầu bếp
-magician  ảo thuật gia
-baker  thợ làm bánh
-singer  ca sĩ
-artist  họa sĩ
-waiter  bồi bàn
-carpenter  thợ mộc
-actor  diễn viên 
-nurse  y tá
-secretary  thư kí
-gardener  người làm vườn
-vet  bác sĩ thú y 
-bussinessman  doanh nhân
-policeman  cảnh sát
-painter  thợ sơn
-hairdresser  thợ cắt tóc
-dancer  vũ công
-farmer  nông dân
-astronaut  phi hành gia
-architect  kiến trúc sư 
-photographer  nhiếp ảnh gia
-flight  attendant tiếp viên hàng không
-interior  designer nhà thiết kế nội thất
-lawyer  luật sư 
-psychologist  nhà tâm lý học 
-model  người mẫu
-journalist  nhà báo
-tour  guide hướng dẫn viên du lịch
-receptionist  nhân viên lễ tân
-engineer  kỹ sư 
-programmer  lập trình viên
-paramedic  nhân viên cấp cứu
-surgeon  bác sĩ phẫu thuật
-tattooist  nhân viên xăm hình
-musician  nhạc công
-sailor  thủy thủ 
-florist  người bán hoa 
-chauffeur  tài xế riêng
-firefighter  lính cứu hỏa
-writer  nhà văn 
-plumber  thợ sửa ống nước 
-mailman  người đưa thư
-barista  nhân viên pha chế
-judge  quan tòa, thẩm phán
-pilot  phi công
-electrician  thợ điện
-mechanic  thợ cơ khí
-cameraman  thợ quay phim
-anorak  áo khoác có mũ
-apron  tạp dề
-baseball  cap mũ lưỡi trai
-belt  thắt lưng
-blazer  áo khoác nam dạng vét
-boots  bốt
-coat  áo khoác 
-dress  váy
-dressing  gown áo choàng tắm
-gloves  găng tay
-hat  mũ
-jacket  áo khoác ngắn
-jeans  quần bò
-jumper  áo len
-knickers  quần lót nữ
-leather  da 
-nightie  váy ngủ
-overalls  quần yếm
-overcoat  áo măng tô
-raincoat  áo mưa
-shirt  áo sơ mi 
-scarf  khăn
-shoes  giày
-socks  tất
-suit  bộ com-lê
-tie  cà vạt
-tights  quần tất
-abalone  bào ngư 
-aligator  cá sấu Nam Mỹ
-anteater  thú ăn kiến
-armadillo  con ta tu 
-ass  con lừa
-baboon  khỉ đầu chó
-bat  con dơi
-beaver  hải ly 
-beetle  bọ cánh cứng
-blackbird  con sáo
-boar  lợn rừng
-buck  nai đực
-bunny  con thỏ
-camel  con lạc đà
-canary  chim vàng anh
-carp  con cá chép
-caterpillar  sâu bướm
-centipede  con rết
-chameleon  tắc kè hoa
-chamois  sơn dương
-chimpanzee  con tinh tinh 
-cicada  con ve sầu
-cobra  rắn hổ mang 
-cock  roach con gián
-cockatoo  vẹt mào
-crab  con cua
-crane  con sếu
-cricket  con dế
-crocodile  con cá sấu
-dalmatian  chó đốm
-donkey  con lừa
-pigeon  bồ câu
-eagle  chim đại bàng
-eel  con lươn
-elephant  con voi
-falcon  chim Ưng
-fawn  con nai
-fiddler  crab con cáy
-fire-fly  đom đóm
-flea  con bọ chét
-foal  ngựa con
-fox  con cáo
-frog  con ếch
-gannet  chim ó biển
-gecko  tắc kè
-gibbon  con vượn
-giraffe  con hươu cao cổ
-goat  con dê
-gopher  chuôt túi
-grasshopper  châu chấu nhỏ
-hare  thỏ rừng
-hawk  diều hâu
-hedgehog  con nhím
-hind  hươu cái
-hippopotamus  hà mã
-hound  chó săn
-hynea  linh cẩu
-iguana  kỳ nhông
-insect  côn trùng
-jellyfish  con sứa
-lady  bird bọ rùa
-lemur  vượn cáo
-leopard  con báo
-lion  sư tử
-locust  cào cào
-lopster  tôm hùm
-louse  chấy rận
-mantis  bọ ngựa
-mosquito  muỗi
-mule  con la
-mussel  con trai
-octopus  bạch tuộc
-orangutan  đười ươi
-monkey  khỉ
-ostrich  đà điểu
-otter  rái cá
-owl  con cú
-panda  gấu trúc
-pangolin  con tê tê
-parrot  con vẹt
-peacock  con công
-aggressive  hung hăng, xông xáo
-ambitious  có nhiều tham vọng
-cautious  thận trọng, cẩn trọng
-careful  cẩn thận
-cheerful  vui vẻ
-clever  khéo léo
-tacful  lịch thiệp
-competitive  cạnh tranh
-confident  tự tin 
-creative  sáng tạo
-dumb  không có tiếng nói
-enthusiastic  nhiệt tình
-easy-going  dễ tính
-extroverted  hướng ngoại
-introverted  hướng nội
-faithful  chung thủy
-generous  rộng lượng
-gentle  nhẹ nhàng
-humorous  hài hước
-honest  trung thực
-imaginative  giàu trí tưởng tượng
-intelligent  thông minh 
-kind  tốt bụng
-loyal  trung thành
-royal  hoàng gia
-observant  tinh ý
-optimistic  lạc quan
-pessimistic  bi quan
-patient  kiên nhẫn
-impatient  thiếu kiên nhẫn
-polite  lịch sự
-impolite  mất lịch sự
-friendly  thân thiện
-sociable  hòa đồng
-quite  trầm tính
-rational  có lý trí
-reckless  hấp tấp
-stubborn  bướng bỉnh
-talkative  nói nhiều 
-understanding  hiểu biết
-wise  cơ trí 
-lazy  lười biếng
-crazy  điên cuồng
-hot-temper  nóng tính
-selfish  ích kỉ
-unselfish  không ích kỉ
-mean  keo kiệt
-cold  lạnh lùng
-stupid  ngốc ngếch
-cruel  ác độc
-new  mới
-arrive  di chuyển
-visit  thăm
-wild  hoang dã
-share  chia sẻ
-message  tin nhắn
-culture  văn hóa
-society  xã hội
-UET  Đại Học Công Nghệ
+﻿﻿you   bạn
+milk   sữa
+home   nhà
+search   danh từ/tìm kiếm/EX: search engine - công cụ tìm kiếm
+illusion   ảo ảnh
+frock   danh từ/áo dài/áo dài việt nam
+suits   âu phục
+grandmother  	bà ngoại
+mouse   chuột
+pitfall   cạm bẫy
+inspired   cảm hứng
+love   yêu
+staff   nhân viên
+beast   cầm thú
+democarcy   dân chủ
+people   người
+mishapen   dị hình
+heritage   di sản
+past   quá khứ
+business   doanh nghiệp
+morality   đạo đức
+night   ban đêm
+lychee   trái vải
+jackfruit   trái khế
+mango   trái xoài
+custard-apple   mãng cầu
+ramcutan   trái chôm chôm
+orange   trái cam
+mandarin   trái quýt
+lemon   quả chanh
+pineapple   quả dứa
+pomegranate   quả lựu
+avacado   quả bơ
+coconut   quả dừa
+melon   quả dưa gang
+banana   quả chuối
+pear   quả lê
+peach   quả đào
+watermelon   quả dưa hấu
+strawberry   quả dâu
+grape   quả nho đen
+fig   quả sung
+pitaya   quả thanh long
+papaya   quả đu đủ
+plum   quả mận
+apricot   quả mơ
+tomato   quả cà chua
+bacon   thịt muối
+beef   thịt bò
+chicken   thịt gà
+cooked   meat thịt chín
+duck   vịt
+ham   thịt giăm bông
+kdneys   thận
+lamb   thịt cừu
+liver   gan
+mince   thịt bò xay
+sausages   xúc xích
+pork   thịt lợn
+turkey   gà tây
+veal   thịt bê
+anchovy   cá trồng
+cod   cá tuyết
+haddock   cá êfin
+herring   cá trích
+kipper   cá hun khói
+mackerel   cá thu
+pilchard   cá mòi cơm
+salmon   cá hồi
+sole   cá bơn
+tuna   cá ngừ
+butter   bơ 
+cream   kem
+cheese   phô mai
+eggs   trứng
+margarine   bơ thực vật
+yogurt   sữa chua
+fastfood   đồ ăn nhanh
+bun   bánh bao nhân nho
+patty   miếng chả nhỏ
+hamburger   bánh kẹp
+hotdog   bánh mì kẹp xúc xích
+wiener   lạp xưởng
+condiments   đồ gia vị
+ketchup   nước sốt cà chua nấm
+mustard   mù tạt
+pickle   hoa quả dầm
+crust   vỏ bánh
+popcorn   ngô rang
+pie   bánh nướng
+donut   bánh rán
+gum   kẹo cao su
+candy   bar thanh kẹo
+beer   bia
+coffee   cà phê
+fruit   juice nước ép hoa quả
+fruit   smoothie sinh tố hoa quả
+hot   chocolate ca cao nóng
+milkshake   sữa lắc
+soda   nước ngọt có ga
+tea   trà
+wine   rượu
+lemonande   nước chanh
+champagne   rượu sâm panh
+grandmother   bà nội, bà ngoại
+grandfather   ông nội, ông ngoại
+mother   mẹ
+father   bố
+uncle   cậu, chú, bác
+aunt   dì
+sister   chị, em gái
+brother   anh, em trai
+cousin   anh chị em họ
+brother-in-law   anh rể, em rể
+niece   cháu gái
+nephew   cháu trai
+only   child con một
+infant   trẻ sơ sinh
+toddler   đứa bé mới đi học
+twin   sinh đôi
+triplet   sinh ba
+sibling   anh chị em ruột
+parents-in-law   bố mẹ chồng
+son   con trai
+daughter-in-law   con dâu
+relative   người họ hàng
+nanny   vú nuôi
+stepmother   mẹ kế
+godmother   mẹ đỡ đầu
+orphan   trẻ mồ côi
+weather   thời tiết
+climate   khí hậu
+mild   ôn hòa, ấm áp
+dry   hanh khô
+wet   ướt sũng
+humid   ẩm
+bright   sáng mạnh
+sunny   trời không có mây
+clear   trời trong trẻo
+fine   không mưa không mây
+windy   trời nhiều gió
+brezze   gió nhẹ
+gloomy   trời ảm đạm
+cloudy   trời nhiều mây
+overcast   âm u
+foggy   có sương mù
+temperature   nhiệt độ
+thermometer   nhiệt kế
+degree   độ
+celsius   độ C
+Fahrenheit   độ F 
+hot   nóng
+baking   hot nóng như thiêu
+cold   lạnh
+chilly   lạnh thấu xương
+freeze   đóng băng
+frosty   đầy sương giá
+rainfall   lượng mưa
+downpour   mưa lớn
+torrential   rain mưa như thác đổ
+weather   forecast dự báo thời tiết
+rain   mưa
+damp   ẩm thấp, ẩm ướt 
+drizzle   mưa phùn
+shower   mưa rào
+hail   mưa đá
+flood   lũ lụt
+lightning   tia chớp
+thunder   sấm sét
+snow   tuyết
+gale   gió giật
+mist   sương muối
+storm   bão
+hurricane   sóng thần
+tornado   lốc xoáy
+rainbow   cầu vồng
+occupation   nghề nghiệp
+doctor   bác sĩ
+dentist   nha sĩ
+cashier   thu ngân
+builder   thợ xây dựng
+reporter   phóng viên
+tailor   thợ may
+teacher   giáo viên
+cook   đầu bếp
+magician   ảo thuật gia
+baker   thợ làm bánh
+singer   ca sĩ
+artist   họa sĩ
+waiter   bồi bàn
+carpenter   thợ mộc
+actor   diễn viên 
+nurse   y tá
+secretary   thư kí
+gardener   người làm vườn
+vet   bác sĩ thú y 
+bussinessman   doanh nhân
+policeman   cảnh sát
+painter   thợ sơn
+hairdresser   thợ cắt tóc
+dancer   vũ công
+farmer   nông dân
+astronaut   phi hành gia
+architect   kiến trúc sư 
+photographer   nhiếp ảnh gia
+flight   attendant tiếp viên hàng không
+interior   designer nhà thiết kế nội thất
+lawyer   luật sư 
+psychologist   nhà tâm lý học 
+model   người mẫu
+journalist   nhà báo
+tour   guide hướng dẫn viên du lịch
+receptionist   nhân viên lễ tân
+engineer   kỹ sư 
+programmer   lập trình viên
+paramedic   nhân viên cấp cứu
+surgeon   bác sĩ phẫu thuật
+tattooist   nhân viên xăm hình
+musician   nhạc công
+sailor   thủy thủ 
+florist   người bán hoa 
+chauffeur   tài xế riêng
+firefighter   lính cứu hỏa
+writer   nhà văn 
+plumber   thợ sửa ống nước 
+mailman   người đưa thư
+barista   nhân viên pha chế
+judge   quan tòa, thẩm phán
+pilot   phi công
+electrician   thợ điện
+mechanic   thợ cơ khí
+cameraman   thợ quay phim
+anorak   áo khoác có mũ
+apron   tạp dề
+baseball   cap mũ lưỡi trai
+belt   thắt lưng
+blazer   áo khoác nam dạng vét
+boots   bốt
+coat   áo khoác 
+dress   váy
+dressing   gown áo choàng tắm
+gloves   găng tay
+hat   mũ
+jacket   áo khoác ngắn
+jeans   quần bò
+jumper   áo len
+knickers   quần lót nữ
+leather   da 
+nightie   váy ngủ
+overalls   quần yếm
+overcoat   áo măng tô
+raincoat   áo mưa
+shirt   áo sơ mi 
+scarf   khăn
+shoes   giày
+socks   tất
+suit   bộ com-lê
+tie   cà vạt
+tights   quần tất
+abalone   bào ngư 
+aligator   cá sấu Nam Mỹ
+anteater   thú ăn kiến
+armadillo   con ta tu 
+ass   con lừa
+baboon   khỉ đầu chó
+bat   con dơi
+beaver   hải ly 
+beetle   bọ cánh cứng
+blackbird   con sáo
+boar   lợn rừng
+buck   nai đực
+bunny   con thỏ
+camel   con lạc đà
+canary   chim vàng anh
+carp   con cá chép
+caterpillar   sâu bướm
+centipede   con rết
+chameleon   tắc kè hoa
+chamois   sơn dương
+chimpanzee   con tinh tinh 
+cicada   con ve sầu
+cobra   rắn hổ mang 
+cock   roach con gián
+cockatoo   vẹt mào
+crab   con cua
+crane   con sếu
+cricket   con dế
+crocodile   con cá sấu
+dalmatian   chó đốm
+donkey   con lừa
+pigeon   bồ câu
+eagle   chim đại bàng
+eel   con lươn
+elephant   con voi
+falcon   chim Ưng
+fawn   con nai
+fiddler   crab con cáy
+fire-fly   đom đóm
+flea   con bọ chét
+foal   ngựa con
+fox   con cáo
+frog   con ếch
+gannet   chim ó biển
+gecko   tắc kè
+gibbon   con vượn
+giraffe   con hươu cao cổ
+goat   con dê
+gopher   chuôt túi
+grasshopper   châu chấu nhỏ
+hare   thỏ rừng
+hawk   diều hâu
+hedgehog   con nhím
+hind   hươu cái
+hippopotamus   hà mã
+hound   chó săn
+hynea   linh cẩu
+iguana   kỳ nhông
+insect   côn trùng
+jellyfish   con sứa
+lady   bird bọ rùa
+lemur   vượn cáo
+leopard   con báo
+lion   sư tử
+locust   cào cào
+lopster   tôm hùm
+louse   chấy rận
+mantis   bọ ngựa
+mosquito   muỗi
+mule   con la
+mussel   con trai
+octopus   bạch tuộc
+orangutan   đười ươi
+monkey   khỉ
+ostrich   đà điểu
+otter   rái cá
+owl   con cú
+panda   gấu trúc
+pangolin   con tê tê
+parrot   con vẹt
+peacock   con công
+aggressive   hung hăng, xông xáo
+ambitious   có nhiều tham vọng
+cautious   thận trọng, cẩn trọng
+careful   cẩn thận
+cheerful   vui vẻ
+clever   khéo léo
+tacful   lịch thiệp
+competitive   cạnh tranh
+confident   tự tin 
+creative   sáng tạo
+dumb   không có tiếng nói
+enthusiastic   nhiệt tình
+easy-going   dễ tính
+extroverted   hướng ngoại
+introverted   hướng nội
+faithful   chung thủy
+generous   rộng lượng
+gentle   nhẹ nhàng
+humorous   hài hước
+honest   trung thực
+imaginative   giàu trí tưởng tượng
+intelligent   thông minh 
+kind   tốt bụng
+loyal   trung thành
+royal   hoàng gia
+observant   tinh ý
+optimistic   lạc quan
+pessimistic   bi quan
+patient   kiên nhẫn
+impatient   thiếu kiên nhẫn
+polite   lịch sự
+impolite   mất lịch sự
+friendly   thân thiện
+sociable   hòa đồng
+quite   trầm tính
+rational   có lý trí
+reckless   hấp tấp
+stubborn   bướng bỉnh
+talkative   nói nhiều 
+understanding   hiểu biết
+wise   cơ trí 
+lazy   lười biếng
+crazy   điên cuồng
+hot-temper   nóng tính
+selfish   ích kỉ
+unselfish   không ích kỉ
+mean   keo kiệt
+cold   lạnh lùng
+stupid   ngốc ngếch
+cruel   ác độc
+new   mới
+arrive   di chuyển
+visit   thăm
+wild   hoang dã
+share   chia sẻ
+message   tin nhắn
+culture   văn hóa
+society   xã hội
+UET Đại Học Công Nghiệp

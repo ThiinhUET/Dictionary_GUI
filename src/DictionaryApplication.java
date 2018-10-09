@@ -260,7 +260,56 @@ public class DictionaryApplication extends JFrame implements ActionListener {
 
         if ("update".equals (e.getActionCommand ()))
         {
-            JOptionPane.showInputDialog (rootPane,"Nhập từ muốn sửa");
+           String updateW =  JOptionPane.showInputDialog (rootPane,"Nhập từ muốn sửa");
+            String updateM =  JOptionPane.showInputDialog (rootPane,"Nhập nghĩa mới của từ");
+            ArrayList<Word> Update = new ArrayList<> ();
+            Scanner scanner = null;
+            String Filepath = "dictionaries.txt";
+            try {
+                scanner = new Scanner(new File (Filepath));
+            }catch (FileNotFoundException e1){
+                scanner = new Scanner(System.in);
+                System.out.print("File not found");
+            }
+            while (scanner.hasNext())
+            {
+                String eng = scanner.next();
+                String vie = scanner.nextLine();
+                Word tmp = new Word();
+                tmp.world_target= eng;
+                tmp.world_explain = vie;
+                Update.add(tmp);
+            }
+            for (int i = 0 ; i < Update.size ();i++)
+            {
+                if (updateW.equals (Update.get (i).world_target))
+                {
+                    Update.remove (i);
+                    Word tmp = new Word ();
+                    tmp.world_target = updateW;
+                    tmp.world_explain = updateM;
+                    Update.add (tmp);
+                }
+            }
+            try{
+                BufferedWriter outputWriteer = null;
+                outputWriteer = new BufferedWriter(new FileWriter("dictionaries.txt"));
+                for (int i = 0; i < Update.size(); i++) {
+                    Word tmp = Update.get(i);
+
+                    outputWriteer.write(tmp.world_target + " " + tmp.world_explain);
+                    outputWriteer.newLine();
+                }
+                outputWriteer.flush();
+                outputWriteer.close();
+            }
+            catch (IOException e1) {
+                e1.printStackTrace ();
+            }
+            JOptionPane.showMessageDialog (rootPane,"Đã được chỉnh sửa");
+            DictionaryManagement.insertFromFile ();
+
+
         }
 
 

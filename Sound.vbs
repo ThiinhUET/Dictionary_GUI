@@ -1,1 +1,1 @@
-CreateObject("SAPI.SpVoice").Speak"Fuck"
+CreateObject("SAPI.SpVoice").Speak"UET"
