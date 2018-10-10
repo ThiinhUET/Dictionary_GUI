@@ -1,28 +1,26 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 
-public class DictionaryApplication extends JFrame implements ActionListener {
+public class DictionaryApplication extends JFrame implements ActionListener, KeyListener {
 
 
-    JTextField InsertWord;
-    JPanel panel;
-    JLabel showIm;
-    TextArea WordMean;
-    JButton read;
-    JFrame frame;
-    JButton seachButton;
-    TextArea SuggestArea;
-    JButton Addnew;
-    JButton DelWord;
-    JButton UpdateWord;
-    JButton exit;
+    private JTextField InsertWord;
+    private JPanel panel;
+    private JLabel showIm;
+    private TextArea WordMean;
+    private JButton read;
+    private JFrame frame;
+    private JButton seachButton;
+    private JList<String> SuggestArea;
+    private JButton Addnew;
+    private JButton DelWord;
+    private JButton UpdateWord;
+    private JButton exit;
+    private DefaultListModel listModel;
 
 
     public static ArrayList dictionarySearcher(String a) {
@@ -57,7 +55,7 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         seachButton.setBounds (500, 400, 100, 35);
         frame.add (seachButton);
 
-
+       // InsertWord.text
         InsertWord = new JTextField ();
         InsertWord.setBounds (20, 60, 200, 25);
         frame.add (InsertWord);
@@ -84,10 +82,20 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         read.setBounds (336, 400, 100, 35);
         frame.add (read);
 
-        SuggestArea = new TextArea ();
-        SuggestArea.setBounds (20, 100, 200, 250);
-        SuggestArea.setFocusable (false);
-        frame.add (SuggestArea);
+        listModel = new DefaultListModel ();
+        for (int i = 0 ; i < Dictionary.wordArray.size ();i++)
+        {
+            listModel.addElement (Dictionary.wordArray.get (i).world_target);
+        }
+        SuggestArea = new JList (listModel);
+        JScrollPane scrollPane = new JScrollPane(SuggestArea);
+        scrollPane.setBounds (20, 100, 200, 250);
+        SuggestArea.setSelectionMode (ListSelectionModel.SINGLE_SELECTION);
+      //  JScrollPane scrollPane = new JScrollPane (SuggestArea);
+        //SuggestArea.setVisibleRowCount (Dictionary.wordArray.size ());
+       // JScrollPane scrollPane = new JScrollPane(SuggestArea);
+        frame.add (scrollPane);
+       // frame.add (SuggestArea);
 
         Addnew = new JButton ("Add");
         Addnew.setBounds (680, 100, 80, 25);
@@ -111,6 +119,7 @@ public class DictionaryApplication extends JFrame implements ActionListener {
         ////////////////////////////setAction//////////////////////
         seachButton.setActionCommand ("search");
         seachButton.addActionListener (this);
+        seachButton.addKeyListener (this);
 
         read.setActionCommand ("read");
         read.addActionListener (this);
@@ -129,22 +138,23 @@ public class DictionaryApplication extends JFrame implements ActionListener {
 
 
         //////////////////////////////////////////////////////////
-        Timer task = new Timer ();
-        TimerTask SG = new TimerTask () {
-            @Override
-            public void run() {
-                SuggestArea.setText (null);
-                ArrayList<Word> tmp;
-                String getT = InsertWord.getText ();
-                tmp = dictionarySearcher (getT);
-                for (int i = 0; i < tmp.size (); i++) {
-                    String tmp2 = tmp.get (i).world_target;
-                    SuggestArea.append (tmp2 + "\n");
-                }
-                //  SuggestArea.setText (null);
-            }
-        };
-        task.schedule (SG, 1, 5000);
+//        Timer task = new Timer ();
+//        TimerTask SG = new TimerTask () {
+//            @Override
+//            public void run() {
+//                SuggestArea.setText (null);
+//                ArrayList<Word> tmp;
+//                String getT = InsertWord.getText ();
+//                tmp = dictionarySearcher (getT);
+//                for (int i = 0; i < tmp.size (); i++) {
+//                    String tmp2 = tmp.get (i).world_target;
+//                    SuggestArea.append (tmp2 + "\n");
+//                }
+//                //  SuggestArea.setText (null);
+//            }
+//        };
+//        task.schedule (SG, 1, 5000);
+
 
 
         //////////////////////////////////////////////////////////////
@@ -166,6 +176,7 @@ public class DictionaryApplication extends JFrame implements ActionListener {
             this.WordMean.setText (output);
 
         }
+
         if ("read".equals (e.getActionCommand ())) {
             String speak = InsertWord.getText ();
             BufferedWriter outputWriter = null;
@@ -296,6 +307,30 @@ public class DictionaryApplication extends JFrame implements ActionListener {
             DictionaryManagement.insertFromFile ();
         }
     }
+
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        String SearchWord = this.InsertWord.getText ();
+        String output = DictionaryManagement.dictionaryLookup (SearchWord);
+//            String[] part = output.split ("/");
+//            String p1 = part[0];
+//            String p2 = part[1];
+//            String p3 = part[2];
+//            this.WordMean.setText (p1 + "\n" + p2 + "\n" + p3);
+        this.WordMean.setText (output);
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
+
 }
 
 
