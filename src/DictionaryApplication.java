@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
@@ -93,11 +95,8 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
         JScrollPane scrollPane = new JScrollPane(SuggestArea);
         scrollPane.setBounds (20, 100, 200, 250);
         SuggestArea.setSelectionMode (ListSelectionModel.SINGLE_SELECTION);
-      //  JScrollPane scrollPane = new JScrollPane (SuggestArea);
-        //SuggestArea.setVisibleRowCount (Dictionary.wordArray.size ());
-       // JScrollPane scrollPane = new JScrollPane(SuggestArea);
         frame.add (scrollPane);
-       // frame.add (SuggestArea);
+
 
         Addnew = new JButton ("Add");
         Addnew.setBounds (680, 100, 80, 25);
@@ -138,24 +137,6 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
         exit.setActionCommand ("exit");
         exit.addActionListener (this);
 
-
-        //////////////////////////////////////////////////////////
-//        Timer task = new Timer ();
-//        TimerTask SG = new TimerTask () {
-//            @Override
-//            public void run() {
-//                SuggestArea.setText (null);
-//                ArrayList<Word> tmp;
-//                String getT = InsertWord.getText ();
-//                tmp = dictionarySearcher (getT);
-//                for (int i = 0; i < tmp.size (); i++) {
-//                    String tmp2 = tmp.get (i).world_target;
-//                    SuggestArea.append (tmp2 + "\n");
-//                }
-//                //  SuggestArea.setText (null);
-//            }
-//        };
-//        task.schedule (SG, 1, 5000);
         MouseListener mouseListener = new MouseAdapter () {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
@@ -163,11 +144,52 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
              {
                  int index = SuggestArea.locationToIndex (mouseEvent.getPoint ());
                  String tmp = Dictionary.wordArray.get (index).world_explain;
+                 tmp.trim ();
                  WordMean.setText (tmp);
              }
             }
         };
         SuggestArea.addMouseListener (mouseListener);
+
+       DocumentListener d1 = new DocumentListener () {
+           @Override
+           public void insertUpdate(DocumentEvent e) {
+               String getW = InsertWord.getText ();
+             ArrayList<Word> tmp = dictionarySearcher (getW);
+             DefaultListModel<String> SG = new DefaultListModel<> ();
+             for (int i = 0 ; i< tmp.size ();i++)
+             {
+                 SG.addElement (tmp.get (i).world_target);
+             }
+             SuggestArea.setModel (SG);
+
+           }
+
+           @Override
+           public void removeUpdate(DocumentEvent e) {
+               String getW = InsertWord.getText ();
+               ArrayList<Word> tmp = dictionarySearcher (getW);
+               DefaultListModel<String> SG = new DefaultListModel<> ();
+               for (int i = 0 ; i< tmp.size ();i++)
+               {
+                   SG.addElement (tmp.get (i).world_target);
+               }
+               SuggestArea.setModel (SG);
+           }
+
+           @Override
+           public void changedUpdate(DocumentEvent e) {
+               String getW = InsertWord.getText ();
+               ArrayList<Word> tmp = dictionarySearcher (getW);
+               DefaultListModel<String> SG = new DefaultListModel<> ();
+               for (int i = 0 ; i< tmp.size ();i++)
+               {
+                   SG.addElement (tmp.get (i).world_target);
+               }
+               SuggestArea.setModel (SG);
+           }
+       };
+       InsertWord.getDocument ().addDocumentListener (d1);
 
         //////////////////////////////////////////////////////////////
     }
