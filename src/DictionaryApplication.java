@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -154,12 +156,20 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
 //            }
 //        };
 //        task.schedule (SG, 1, 5000);
-
-
+        MouseListener mouseListener = new MouseAdapter () {
+            @Override
+            public void mouseClicked(MouseEvent mouseEvent) {
+             if (mouseEvent.getClickCount ()==1)
+             {
+                 int index = SuggestArea.locationToIndex (mouseEvent.getPoint ());
+                 String tmp = Dictionary.wordArray.get (index).world_explain;
+                 WordMean.setText (tmp);
+             }
+            }
+        };
+        SuggestArea.addMouseListener (mouseListener);
 
         //////////////////////////////////////////////////////////////
-
-
     }
 
     @Override

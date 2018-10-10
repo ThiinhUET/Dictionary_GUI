@@ -1,8 +1,8 @@
-milk   sữa
-home         nhà
-search         danh từ/tìm kiếm/EX: search engine - công cụ tìm kiếm
-illusion         ảo ảnh
-frock         danh từ/áo dài/áo dài việt nam
+milk sữa
+home nhà
+search danh từ/tìm kiếm/EX: search engine - công cụ tìm kiếm
+illusion ảo ảnh
+frock danh từ/áo dài/áo dài việt nam
 suits         âu phục
 grandmother        	bà ngoại
 mouse         chuột

@@ -38,7 +38,7 @@ public class DictionaryCommandLine {
     public static final Scanner input = new Scanner(System.in);
     static int N ;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         dictionaryAdvanced();
         new DictionaryApplication().JFrameDemo();
 
