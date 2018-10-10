@@ -142,14 +142,18 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
             public void mouseClicked(MouseEvent mouseEvent) {
              if (mouseEvent.getClickCount ()==1)
              {
-                 int index = SuggestArea.locationToIndex (mouseEvent.getPoint ());
-                 String tmp = Dictionary.wordArray.get (index).world_explain;
-                 tmp.trim ();
-                 WordMean.setText (tmp);
+             //    int index = SuggestArea.locationToIndex (mouseEvent.getPoint ());
+                 String tmp = SuggestArea.getSelectedValue ();
+                 for (int i = 0 ; i < Dictionary.wordArray.size ();i++) {
+                   if (tmp.equals (Dictionary.wordArray.get (i).world_target))
+                     WordMean.setText (Dictionary.wordArray.get (i).world_explain);
+                 }
              }
             }
         };
         SuggestArea.addMouseListener (mouseListener);
+
+
 
        DocumentListener d1 = new DocumentListener () {
            @Override
