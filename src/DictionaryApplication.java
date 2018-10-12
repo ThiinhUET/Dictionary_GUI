@@ -142,8 +142,8 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
             public void mouseClicked(MouseEvent mouseEvent) {
              if (mouseEvent.getClickCount ()==1)
              {
-             //    int index = SuggestArea.locationToIndex (mouseEvent.getPoint ());
                  String tmp = SuggestArea.getSelectedValue ();
+                 InsertWord.setText (tmp);
                  for (int i = 0 ; i < Dictionary.wordArray.size ();i++) {
                    if (tmp.equals (Dictionary.wordArray.get (i).world_target))
                      WordMean.setText (Dictionary.wordArray.get (i).world_explain);
@@ -252,7 +252,7 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
         }
 
         if ("delete".equals (e.getActionCommand ())) {
-            String del = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn xóa");
+            String toDEL = SuggestArea.getSelectedValue ();
             ArrayList<Word> DeleteArray = new ArrayList<> ();
             Scanner scanner = null;
             String Filepath = "dictionaries.txt";
@@ -272,7 +272,7 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
             }
             int index = 0;
             for (int i = 0; i < DeleteArray.size (); i++) {
-                if (del.equals (DeleteArray.get (i).world_target)) {
+                if (toDEL.equals (DeleteArray.get (i).world_target)) {
                     index = i;
                 }
             }
@@ -351,22 +351,12 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
 
     @Override
     public void keyPressed(KeyEvent e) {
-        String SearchWord = this.InsertWord.getText ();
-        String output = DictionaryManagement.dictionaryLookup (SearchWord);
-//            String[] part = output.split ("/");
-//            String p1 = part[0];
-//            String p2 = part[1];
-//            String p3 = part[2];
-//            this.WordMean.setText (p1 + "\n" + p2 + "\n" + p3);
-        this.WordMean.setText (output);
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
 
     }
-
 }
 
 
