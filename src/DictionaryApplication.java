@@ -8,6 +8,8 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class DictionaryApplication extends JFrame implements ActionListener, KeyListener {
 
@@ -40,7 +42,18 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
     }
 
     public void JFrameDemo() {
+//        TimerTask task = new TimerTask () {
+//            @Override
+//            public void run() {
+//                createAndShow ();
+//            }
+//        };
+//        Timer timer = new Timer ("Timer");
+//        long delay = 1000;
+//        long period = 1000;
+//        timer.schedule (task,delay,period);
         createAndShow ();
+
 
     }
 
@@ -136,6 +149,7 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
 
         exit.setActionCommand ("exit");
         exit.addActionListener (this);
+
 
         MouseListener mouseListener = new MouseAdapter () {
             @Override
@@ -238,6 +252,10 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
             String addW = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn thêm");
             String addM = JOptionPane.showInputDialog (rootPane, "Nhập Nghĩa");
             JOptionPane.showMessageDialog (rootPane, "Đã được thêm");
+            Word add = new Word ();
+            add.world_target = addW;
+            add.world_explain = addM;
+            Dictionary.wordArray.add (add);
             //   DictionaryManagement.updateDictionary (addW,addM);
             try {
                 FileWriter fstream = new FileWriter ("dictionaries.txt", true);
@@ -248,11 +266,21 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
             } catch (IOException e2) {
                 e2.printStackTrace ();
             }
-            DictionaryManagement.insertFromFile ();
+           // DictionaryManagement.insertFromFile ();
+
         }
 
         if ("delete".equals (e.getActionCommand ())) {
             String toDEL = SuggestArea.getSelectedValue ();
+            int index1 = 0;
+            for (int i = 0 ; i < Dictionary.wordArray.size ();i++)
+            {
+                if (toDEL.equals (Dictionary.wordArray.get (i).world_target))
+                {
+                    index1 = i;
+                }
+            }
+            Dictionary.wordArray.remove (index1);
             ArrayList<Word> DeleteArray = new ArrayList<> ();
             Scanner scanner = null;
             String Filepath = "dictionaries.txt";
@@ -288,17 +316,31 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
                 }
                 outputWriteer.flush ();
                 outputWriteer.close ();
+             //   DictionaryManagement.insertFromFile ();
             } catch (IOException e1) {
                 e1.printStackTrace ();
             }
             JOptionPane.showMessageDialog (rootPane, "Đã xóa khỏi từ điển");
-            DictionaryManagement.insertFromFile ();
+         //   DictionaryManagement.insertFromFile ();
+
 
         }
 
         if ("update".equals (e.getActionCommand ())) {
-            String updateW = JOptionPane.showInputDialog (rootPane, "Nhập từ muốn sửa");
+            String toUP = SuggestArea.getSelectedValue ();
             String updateM = JOptionPane.showInputDialog (rootPane, "Nhập nghĩa mới của từ");
+            int index = 0;
+            for (int i = 0 ; i < Dictionary.wordArray.size ();i++)
+            {
+                if (toUP.equals (Dictionary.wordArray.get (i).world_target))
+                {
+                    Dictionary.wordArray.get (i).world_explain = updateM;
+                    index = i;
+                }
+            }
+            Dictionary.wordArray.remove (index);
+
+
             ArrayList<Word> Update = new ArrayList<> ();
             Scanner scanner = null;
             String Filepath = "dictionaries.txt";
@@ -317,10 +359,10 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
                 Update.add (tmp);
             }
             for (int i = 0; i < Update.size (); i++) {
-                if (updateW.equals (Update.get (i).world_target)) {
+                if (toUP.equals (Update.get (i).world_target)) {
                     Update.remove (i);
                     Word tmp = new Word ();
-                    tmp.world_target = updateW;
+                    tmp.world_target = toUP;
                     tmp.world_explain = updateM;
                     Update.add (tmp);
                 }
@@ -336,11 +378,14 @@ public class DictionaryApplication extends JFrame implements ActionListener, Key
                 }
                 outputWriteer.flush ();
                 outputWriteer.close ();
+            //    DictionaryManagement.insertFromFile ();
             } catch (IOException e1) {
                 e1.printStackTrace ();
             }
             JOptionPane.showMessageDialog (rootPane, "Đã được chỉnh sửa");
+
             DictionaryManagement.insertFromFile ();
+
         }
     }
 
